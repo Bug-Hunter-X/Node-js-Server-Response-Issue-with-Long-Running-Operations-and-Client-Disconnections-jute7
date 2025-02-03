@@ -1,0 +1,3 @@
+# Node.js Server Response Issue with Long-Running Operations and Client Disconnections
+
+This repository demonstrates a potential issue in Node.js servers where a response might not be sent to the client if a long-running operation is in progress and the client disconnects prematurely. The server simulates a long-running task (counting to 5 with a 1-second interval).  If the client closes the connection before the count reaches 5, the response won't be sent. The solution addresses this by managing the response process more robustly to handle client disconnections gracefully.
